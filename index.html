@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guida Kit 37 Sensori Arduino</title>
+    <title>Mastering Arduino: 37 Sensors Kit</title>
     <style>
-        /* Stile moderno e pulito */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f6; }
-        header { background: #2c3e50; color: #fff; padding: 2rem; text-align: center; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-        .sensor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        /* Reset e Stili Base */
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; scroll-behavior: smooth; background-color: #f8f9fa; }
+        
+        /* SEZIONE HERO (Pagina di Titolo) */
+        .hero {
+            height: 100vh; /* Copre tutta la schermata */
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; line-height: 1.6; margin-bottom: 2rem; opacity: 0.9; }
+        .btn-start {
+            padding: 15px 30px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-start:hover { background-color: #d35400; }
+
+        /* NAVIGAZIONE E CATALOGO */
+        .container { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; color: #2c3e50; }
+        
+        .sensor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         
         /* Card dei sensori */
-        .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .tag { display: inline-block; background: #e67e22; color: #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem; }
-        h2 { color: #2c3e50; margin-top: 0; }
-        .spec-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
-        .spec-table td { border: 1px solid #eee; padding: 0.5rem; }
-        .spec-table td:first-child { font-weight: bold; background: #f9f9f9; width: 40%; }
-        
-        pre { background: #272822; color: #f8f8f2; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); padding: 2rem; border-top: 5px solid #3498db; }
+        .tag { background: #ecf0f1; color: #7f8c8d; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; }
+        h2 { margin: 10px 0; color: #2c3e50; }
+        .spec-table { width: 100%; margin-top: 15px; border-collapse: collapse; font-size: 0.85rem; }
+        .spec-table td { padding: 8px; border-bottom: 1px solid #eee; }
+        .spec-table td:first-child { font-weight: bold; color: #3498db; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Kit 37 Sensori per Arduino</h1>
-    <p>Guida completa per programmatori principianti</p>
-</header>
+    <!-- SEZIONE 1: PAGINA DI TITOLO (HERO) -->
+    <section class="hero">
+        <h1>Kit 37 Sensori Arduino</h1>
+        <p>
+            Il Kit 37in1 è uno strumento indispensabile per chi vuole avvicinarsi alla sperimentazione 
+            nell'ambito dell'elettronica e della programmazione. Progettato per Arduino e Raspberry Pi, 
+            permette di creare un'infinità di progetti interattivi [1].
+        </p>
+        <a href="#catalogo" class="btn-start">Esplora i Sensori</a>
+    </section>
 
-<div class="container">
+    <!-- SEZIONE 2: CATALOGO DEI SENSORI -->
+    <div class="container" id="catalogo">
+        <h2 class="section-title">Catalogo Completo dei Moduli</h2>
+
     <div class="sensor-grid">
 
         <!-- Esempio Sensore KY-001 -->
@@ -123,11 +157,11 @@
                     <tr><td>Consumo</td><td>30mA@5V</td></tr>
                 </table>
             </div>
-             <!-- Esempio Sensore KY-009 ancora da modificare -->
+             <!-- Esempio Sensore KY-009 -->
             <div class="card">
-                <span class="tag">Ambientale</span>
-                <h2>KY-008 Laser Emission Sensor Module</h2>
-                <p>prova di modifica.</p>
+                <span class="tag">Attuatori/output</span>
+                <h2>KY-009 3-Color full-color LED SMD modules</h2>
+                <p>È composto dai LED rosso, verde e blu; Arduino può utilizzare questo sensore per creare diverse tonalità di luce.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>ATTENZIONE:</td><td>NON GUARDARE DIRETTAMENTE NEL RAGGIO LASER!</td></tr>
