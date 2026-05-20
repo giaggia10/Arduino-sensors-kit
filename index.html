@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Kit 37 Sensori Arduino</title>
+    <style>
+        /* Stile moderno e pulito */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f6; }
+        header { background: #2c3e50; color: #fff; padding: 2rem; text-align: center; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        .sensor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        
+        /* Card dei sensori */
+        .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .tag { display: inline-block; background: #e67e22; color: #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem; }
+        h2 { color: #2c3e50; margin-top: 0; }
+        .spec-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
+        .spec-table td { border: 1px solid #eee; padding: 0.5rem; }
+        .spec-table td:first-child { font-weight: bold; background: #f9f9f9; width: 40%; }
+        
+        pre { background: #272822; color: #f8f8f2; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kit 37 Sensori per Arduino</h1>
+    <p>Guida completa per programmatori principianti</p>
+</header>
+
+<div class="container">
+    <div class="sensor-grid">
+
+        <!-- Esempio Sensore KY-001 -->
+        <div class="card">
+            <span class="tag">Ambientale</span>
+            <h2>KY-001 Temperature Sensor Module</h2>
+            <p>È un piccolo componente che serve a misurare la temperatura. Comunica tramite protocollo 1-Wire, rendendolo semplice da collegare con un solo pin di segnale.</p>
+            <h3>Specifiche Tecniche</h3>
+            <table class="spec-table">
+                <tr><td>Alimentazione</td><td>3V ~ 5V</td></tr>
+                <tr><td>Range</td><td>-55°C ~ +125°C</td></tr>
+                <tr><td>Approssimazione</td><td>±0.5°C</td></tr>
+                <tr><td>Risoluzione</td><td>9-bit ~ 12-bit</td></tr>
+            </table>
+        </div>
+        <!-- Esempio Sensore KY-002 -->
+        <div class="card">
+            <span class="tag">Movimento fisico</span>
+            <h2>KY-002 Vibration Switch Module</h2>
+            <p>Rileva la presenza di vibrazioni o movimenti. Utilizza un sensore piezoelettrico per identificare le variazioni di pressione.</p>
+            <h3>Specifiche Tecniche</h3>
+            <table class="spec-table">
+                <tr><td>Tensione operativa</td><td>12V</td></tr>
+                <tr><td>Resistenza Oper Switch</td><td> Maggiore di 10MOhm </td></tr>
+                <tr><td>Resistenza Close Switch</td><td> Minore di 30MOhm </td></tr>
+                <tr><td>Ciclo di vita</td><td>100 cicli di utilizzo</td></tr>
+            </table>
+        </div>
+        <!-- Esempio Sensore KY-003 -->
+        <div class="card">
+            <span class="tag">Magnetici</span>
+            <h2>KY-003 Hall Magnetic Sensor Module</h2>
+            <p>Rileva la presenza di un campo magnetico. Utilizza un sensore Hall per identificare le variazioni del campo magnetico. È possibile integrare un LED per indicare lo stato del sensore.</p>
+            <h3>Specifiche Tecniche</h3>
+            <table class="spec-table">
+                <tr><td>Alimentazione</td><td>5V</td></tr>
+                <tr><td>Consumo in stand-by</td><td>3mA</td></tr>
+                <tr><td>Consumo attivo</td><td>8mA</td></tr>
+                <tr><td>Rilevamento</td><td>High: nessun rilevamento
+                Low: rilevato campo magnetico</td>
+                </td></tr>
+            </table>
+        </div>
+        <!-- Esempio Sensore KY-004 -->
+        <div class="card">
+            <span class="tag">Interazione/Input</span>
+            <h2>KY-004 Key Switch Module</h2>
+            <p>Un semplice pulsante a pressione momentanea. Quando viene premuto, invia un segnale ad Arduino per indicare l'attivazione.</p>
+            <h3>Specifiche Tecniche</h3>
+            <table class="spec-table">
+                <tr><td>Funzione</td><td>Pressione momentanea</td></tr>
+                <tr><td>Collegamento consigliato</td><td>Pin 10</td></tr>
+            </table>
+        </div>
+            <!-- Esempio Sensore KY-005 -->
+            <div class="card">
+                <span class="tag">Infrarossi e ottici</span>
+                <h2>KY-005 Infrared Emission Sensor Module</h2>
+                <p>Emette una luce infrarossa, invisibile all'occhio umano, che serve per inviare segnali di controllo.</p>
+                <h3>Specifiche Tecniche</h3>
+                <table class="spec-table">
+                    <tr><td>Tensione Operativa</td><td>5V</td></tr>
+                    <tr><td>Corrente</td><td>30~60mA</td></tr>
+                    <tr><td>Consumo</td><td>90mW</td></tr>
+                    <tr><td>Temperatura operativa</td><td>-25°C ~ +80°C</td></tr>
+                </table>
+            </div>
+            <!-- Esempio Sensore KY-006 -->
+            <div class="card">
+                <span class="tag">Attuatori/output</span>
+                <h2>KY-006 Small Passive Buzzer Module</h2>
+                <p>È un modulo buzzer passivo che emette suoni quando riceve alimentazione o un segnale da Arduino.</p>
+                <h3>Specifiche Tecniche</h3>
+                <table class="spec-table">
+                    <tr><td>Tensione Operativa</td><td>1.5V</td></tr>
+                    <tr><td>Corrente operativa</td><td>Minore di 25mA</td></tr>
+                    <tr><td>Frequenza operativa</td><td>1.5KHz ~ 2KHz</td></tr>
+                </table>
+            </div>
+            <!-- Esempio Sensore KY-008 -->
+            <div class="card">
+                <span class="tag">Infrarossi e ottici</span>
+                <h2>KY-008 Laser Emission Sensor Module</h2>
+                <p>Emette un raggio laser rosso, visibile all'occhio umano, che Arduino può utilizzare per proiettare un punto luminoso.</p>
+                <h3>Specifiche Tecniche</h3>
+                <table class="spec-table">
+                    <tr><td>ATTENZIONE:</td><td>NON GUARDARE DIRETTAMENTE NEL RAGGIO LASER!</td></tr>
+                    <tr><td>Wavelength</td><td>650nm</td></tr>
+                    <tr><td>Collegamento di segnale</td><td>Pin +5v</td></tr>
+                    <tr><td>Consumo</td><td>30mA@5V</td></tr>
+                </table>
+            </div>
+             <!-- Esempio Sensore KY-009 ancora da modificare -->
+            <div class="card">
+                <span class="tag">Infrarossi e ottici</span>
+                <h2>KY-008 Laser Emission Sensor Module</h2>
+                <p>Emette un raggio laser rosso, visibile all'occhio umano, che Arduino può utilizzare per proiettare un punto luminoso.</p>
+                <h3>Specifiche Tecniche</h3>
+                <table class="spec-table">
+                    <tr><td>ATTENZIONE:</td><td>NON GUARDARE DIRETTAMENTE NEL RAGGIO LASER!</td></tr>
+                    <tr><td>Wavelength</td><td>650nm</td></tr>
+                    <tr><td>Collegamento di segnale</td><td>Pin +5v</td></tr>
+                    <tr><td>Consumo</td><td>30mA@5V</td></tr>
+                </table>
+            </div>
+
+    </div>
+</div>
+
+</body>
+</html>
