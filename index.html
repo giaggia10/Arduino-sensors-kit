@@ -41,11 +41,11 @@
         
         /* Card dei sensori */
         .card { background: white; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); padding: 2rem; border-top: 5px solid #3498db; }
-        .tag { background: #311ab1; color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; }
+        .tag { background: #b20f0f; color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; }
         h2 { margin: 10px 0; color: #2c3e50; }
         .spec-table { width: 100%; margin-top: 15px; border-collapse: collapse; font-size: 0.85rem; }
         .spec-table td { padding: 8px; border-bottom: 1px solid #eee; }
-        .spec-table td:first-child { font-weight: bold; color: #3498db; }
+        .spec-table td:first-child { font-weight: bold; color: #311ab1; }
         .card-img {
         width: 100%;
         height: 180px; /* Altezza fissa per uniformità */
@@ -82,7 +82,7 @@
             <p>È un piccolo componente che serve a misurare la temperatura. Comunica tramite protocollo 1-Wire, rendendolo semplice da collegare con un solo pin di segnale.</p>
             <h3>Specifiche Tecniche</h3>
             <table class="spec-table">
-                <tr><td>Alimentazione</td><td>3V ~ 5V</td></tr>
+                <tr><td>Alimentazione</td><td>3.0V ~ 5.0V</td></tr>
                 <tr><td>Range</td><td>-55°C ~ +125°C</td></tr>
                 <tr><td>Approssimazione</td><td>±0.5°C</td></tr>
                 <tr><td>Risoluzione</td><td>9-bit ~ 12-bit</td></tr>
@@ -95,10 +95,10 @@
             <p>Rileva la presenza di vibrazioni o movimenti. Utilizza un sensore piezoelettrico per identificare le variazioni di pressione.</p>
             <h3>Specifiche Tecniche</h3>
             <table class="spec-table">
-                <tr><td>Tensione operativa</td><td>12V</td></tr>
+                <tr><td>Tensione operativa</td><td>12.0V</td></tr>
                 <tr><td>Resistenza circuito aperto</td><td> Maggiore di 10MOhm </td></tr>
                 <tr><td>Resistenza circuito chiuso</td><td> Minore di 30MOhm </td></tr>
-                <tr><td>Ciclo di vita</td><td>100 cicli di utilizzo</td></tr>
+                <tr><td>Cicli di utilizzo</td><td>~100</td></tr>
             </table>
         </div>
         <!-- Esempio Sensore KY-003 -->
@@ -108,11 +108,11 @@
             <p>Rileva la presenza di un campo magnetico. Utilizza un sensore Hall per identificare le variazioni del campo magnetico. È possibile integrare un LED per indicare lo stato del sensore.</p>
             <h3>Specifiche Tecniche</h3>
             <table class="spec-table">
-                <tr><td>Alimentazione</td><td>5V</td></tr>
+                <tr><td>Alimentazione</td><td>5.0V</td></tr>
                 <tr><td>Consumo in stand-by</td><td>3mA</td></tr>
                 <tr><td>Consumo attivo</td><td>8mA</td></tr>
-                <tr><td>Rilevamento</td><td>High: nessun rilevamento
-                Low: rilevato campo magnetico</td>
+                <tr><td>Rilevamento</td><td>HIGH: nessun rilevamento
+                LOW: rilevato campo magnetico</td>
                 </td></tr>
             </table>
         </div>
@@ -134,8 +134,8 @@
                 <p>Emette una luce infrarossa, invisibile all'occhio umano, che serve per inviare segnali di controllo.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione Operativa</td><td>5V</td></tr>
-                    <tr><td>Corrente</td><td>30~60mA</td></tr>
+                    <tr><td>Tensione Operativa</td><td>5.0V</td></tr>
+                    <tr><td>Corrente</td><td>30 ~ 60mA</td></tr>
                     <tr><td>Consumo</td><td>90mW</td></tr>
                     <tr><td>Temperatura operativa</td><td>-25°C ~ +80°C</td></tr>
                 </table>
@@ -149,7 +149,7 @@
                 <table class="spec-table">
                     <tr><td>Tensione Operativa</td><td>1.5V</td></tr>
                     <tr><td>Corrente operativa</td><td>Minore di 25mA</td></tr>
-                    <tr><td>Frequenza operativa</td><td>1.5KHz ~ 2KHz</td></tr>
+                    <tr><td>Frequenza operativa</td><td>1.5KHz ~ 2.0KHz</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-008 -->
@@ -161,7 +161,7 @@
                 <table class="spec-table">
                     <tr><td>ATTENZIONE</td><td>NON GUARDARE DIRETTAMENTE NEL RAGGIO LASER!</td></tr>
                     <tr><td>Wavelength</td><td>650nm</td></tr>
-                    <tr><td>Collegamento di segnale</td><td>Pin +5v</td></tr>
+                    <tr><td>Collegamento di segnale</td><td>Pin +5V</td></tr>
                     <tr><td>Consumo</td><td>30mA@5V</td></tr>
                 </table>
             </div>
@@ -173,12 +173,11 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Tensione operativa</td><td>5V</td></tr>
-                    <tr><td>Modalità di controllo LED</td><td>catodo comune</td></tr>
-                    <tr><td>Corrente (max)</td><td>20mA</td></tr>
-                    <tr><td>Tensione (max)</td><td>LED Rosso: 1.80V (2.4V)
-                    LED Verde: 2.8V (3.6V)
-                    LED Blu: 2.8V (3.6V)</td>
-                    </td></tr>
+                    <tr><td>Modalità di controllo LED</td><td>Catodo comune</td></tr>
+                    <tr><td>Corrente</td><td>20mA</td></tr>
+                    <tr><td>Tensione LED Rosso</td><td>1.8V - 2.4V</td></tr>
+                    <tr><td>Tensione LED Verde</td><td>2.8V - 3.6V</td></tr>
+                    <tr><td>Tensione LED Blu</td><td>2.8V - 3.6V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-010 -->
@@ -188,7 +187,7 @@
                 <p>È un modulo che utilizza la luce infrarossa per rilevare la presenza di oggetti.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>3.3V~5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V</td></tr>
                     <tr><td>Resistenza circuito aperto</td><td> Maggiore di 10MOhm </td></tr>
                 </table>
             </div>
@@ -199,8 +198,8 @@
                 <p>È composto da due LED di colore diverso; Arduino può utilizzare i diversi colori per segnalare il livello di uscita sulle due porte.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione (max)</td><td>LED Rosso: 1.9V (2.3V)
-                    LED Verde: 2.0V (2.4V)</td></tr>
+                    <tr><td>Tensione LED Rosso</td><td>1.9V - 2.3V</td></tr>
+                    <tr><td>Tensione LED Verde</td><td>2.0V - 2.4V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-012 -->
@@ -210,7 +209,7 @@
                 <p>È un attuatore che permette di generare suoni acustici; non è possibile determinare la frequenza del suono, per questa funzione è necessario il sensore KY-006.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>3.5~5.5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.5V ~ 5.5V</td></tr>
                     <tr><td>Corrente (max)</td><td>30mA</td></tr>
                     <tr><td>Frequenza di risonanza</td><td>2500Hz ± 300Hz</td></tr>
                 </table>
@@ -224,7 +223,7 @@
                 <table class="spec-table">
                     <tr><td>Termoresistenza</td><td>NTC</td></tr>
                     <tr><td>Misurazione</td><td>multipunto</td></tr>
-                    <tr><td>Temperatura operativa</td><td>-55°C~125°C</td></tr>
+                    <tr><td>Temperatura operativa</td><td>-55°C ~ +125°C</td></tr>
                     <tr><td>Accuratezza</td><td>±0.5°C</td></tr>
                 </table>
             </div>
@@ -235,9 +234,9 @@
                 <p>È un sensore che misura la temperatura e l'umidità ambiente e fornisce segnali analogici proporzionali alle due grandezze.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Alimentazione</td><td>3.3V~5.5V</td></tr>
-                    <tr><td>Range rilevamento temperatura</td><td>0~50°C</td></tr>
-                    <tr><td>Range rilevamento umidità</td><td>20%~90%RH</td></tr>
+                    <tr><td>Alimentazione</td><td>3.3V ~ 5.5V</td></tr>
+                    <tr><td>Range rilevamento temperatura</td><td>0°C ~ 50°C</td></tr>
+                    <tr><td>Range rilevamento umidità</td><td>20%RH ~ 90%RH</td></tr>
                     <tr><td>Accuratezza Temperatura</td><td>±2°C</td></tr>
                     <tr><td>Accuratezza Umidità</td><td>±5%RH</td></tr>
                     <tr><td>Risoluzione temperatura</td><td>1°C</td></tr>
@@ -252,12 +251,12 @@
                 <p>È un attuatore che contiene tre LED di colore RGB; permette di generare luci di diversi colori.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>5V</td></tr>
-                    <tr><td>Modalità di controllo LED</td><td>catodo comune</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
+                    <tr><td>Modalità di controllo LED</td><td>Catodo comune</td></tr>
                     <tr><td>Corrente (max)</td><td>20mA</td></tr>
-                    <tr><td>Tensione diretta (max)</td><td>LED Rosso: 1.80V (2.4V)
-                    LED Verde: 2.8V (3.6V)
-                    LED Blu: 2.8V (3.6V)</td></tr>
+                    <tr><td>Tensione LED Rosso</td><td>1.8V - 2.4V</td></tr>
+                    <tr><td>Tensione LED Verde</td><td>2.8V - 3.6V</td></tr>
+                    <tr><td>Tensione LED Blu</td><td>2.8V - 3.6V</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-017 -->
@@ -267,7 +266,7 @@
                 <p>È un sensore che rileva l'inclinazione o lo spostamento degli oggetti attraverso una piccola quantità di mercurio presente al suo interno.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-018 -->
@@ -277,7 +276,7 @@
                 <p>È un sensore che misura l'intensità luminosa nell'ambiente e fornisce un segnale analogico proporzionale alla luminosità.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
                     <tr><td>Tipo di fotodiodo</td><td> Resistenza fotosensibile ad ultravioletti, infrarossi e luce visibile</td></tr>
                 </table>
             </div>
@@ -288,10 +287,10 @@
                 <p>È un attuatore che permette di controllare dispositivi ad alta potenza utilizzando un segnale di controllo a bassa potenza.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Alimentazione</td><td>5V</td></tr>
-                    <tr><td>Segnale di controllo</td><td>TTL (5V~12V)</td></tr>
-                    <tr><td>Carico massimo</td><td>10A-250VAC</td></tr>
-                    <tr><td>Carico minimo</td><td>10A-30VDC</td></tr>
+                    <tr><td>Alimentazione</td><td>5.0V</td></tr>
+                    <tr><td>Segnale di controllo</td><td>TTL (5.0V ~ 12.0V)</td></tr>
+                    <tr><td>Carico massimo</td><td>10A - 250VAC</td></tr>
+                    <tr><td>Carico minimo</td><td>10A - 30VDC</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-020 -->
@@ -301,9 +300,9 @@
                 <p>È un sensore che rileva l'inclinazione o il capovolgimento di un oggetto, invia un segnale di output ad Arduino per segnalare lo spostamento. A seconda dell'inclinazione del modulo, cambiano le condizioni dell'uscita S rispetto a GND.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Modulo Orizzontale</td><td>S=HIGH=VCC</td></tr>
-                    <tr><td>Modulo Verticale</td><td>S=LOW=0V</td></tr>
-                    <tr><td>Tensione operativa</td><td>3.3V~5V</td></tr>
+                    <tr><td>Modulo Orizzontale</td><td>S = HIGH = VCC</td></tr>
+                    <tr><td>Modulo Verticale</td><td>S = LOW=0V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-021 -->
@@ -314,7 +313,7 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Resistenza interna</td><td>10KOhm</td></tr>
-                    <tr><td>Tensione operativa</td><td>3.3V~5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-022 -->
@@ -326,7 +325,7 @@
                 <table class="spec-table">
                     <tr><td>Angolo di ricezione</td><td>90°</td></tr>
                     <tr><td>Frequenza</td><td>37.9KHz</td></tr>
-                    <tr><td>Tensione operativa</td><td>2.7V~5.5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>2.7V ~ 5.5V</td></tr>
                     <tr><td>Distanza di comunicazione massima</td><td>18m</td></tr>
                 </table>
             </div>
@@ -338,7 +337,7 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Potenziometri correlati</td><td>2*10Kohm</td></tr>
-                    <tr><td>Tensione operativa</td><td>5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-024 -->
@@ -358,7 +357,7 @@
                 <p>È un sensore che rileva la presenza di un magnetismo e attiva lo switch presente sul modulo; questo invia un segnale ad Arduino che in seguito attiva un LED integrato.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-026 -->
@@ -368,11 +367,11 @@
                 <p>È un sensore che rileva la presenza di fiamme, o luci intense, e invia un segnale ad Arduino; può essere utilizzato per attivare un allarme o un sistema di estinzione.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Lughezza di rilevamento</td><td>760nm-1100nm</td></tr>
+                    <tr><td>Lughezza di rilevamento</td><td>760nm - 1100nm</td></tr>
                     <tr><td>Angolo di rilevamento</td><td>60°</td></tr>
                     <tr><td>Uscita analogica</td><td>A0</td></tr>
                     <tr><td>Uscita digitale</td><td>D0</td></tr>
-                    <tr><td>Tensione operativa</td><td>3V-5.5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.0V - 5.5V</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-027 -->
@@ -382,7 +381,7 @@
                 <p>È dotato di due sensori a mercurio dotati di un LED integrato; i LED si accendono e spengono in alternanza a seconda dell'inclinazione subita dal modulo.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>3.3V~5V</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-028 -->
@@ -395,8 +394,8 @@
                     <tr><td>Termoresistenza</td><td>NTC</td></tr>
                     <tr><td>Comparatore di tensione</td><td>LM393</td></tr>
                     <tr><td>Corrente</td><td>15mA</td></tr>
-                    <tr><td>Temperatura operativa</td><td>20°C~50°C</td></tr>
-                    <tr><td>Tensione operativa</td><td>3.3V-5V</td></tr>
+                    <tr><td>Temperatura operativa</td><td>20°C ~ 50°C</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-029 -->
@@ -407,11 +406,10 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Lunghezza d'onda</td><td>571+625nm</td></tr>
-                    <tr><td>Intensità luminosa</td><td>20-40mcd; 60-80mcd</td></tr>
+                    <tr><td>Intensità luminosa</td><td>20mcd -  40mcd; 60mcd - 80mcd</td></tr>
                     <tr><td>Corrente</td><td>20mA</td></tr>
-                    <tr><td>Tensione operativa</td><td>LED rosso: 2.3V-6V 
-                    LED verde: 1.9V-2.2V</td>
-                    </td></tr>
+                    <tr><td>Tensione LED Rosso</td><td>2.3V - 6.0V </td></tr>
+                    <tr><td>Tensione LED Verde</td><td>1.9V - 2.2V</td></tr>
                 </table>
             </div>
              <!-- Esempio Sensore KY-031 -->
@@ -422,7 +420,7 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Segnale di output</td><td>Singolo canale</td></tr>
-                    <tr><td>Tensione operativa</td><td>3V~5V DC</td>
+                    <tr><td>Tensione operativa</td><td>3.0V ~ 5.0V DC</td>
                     </td></tr>
                 </table>
             </div>
@@ -433,14 +431,13 @@
                 <p>È un sensore che rileva gli ostacoli e fornisce un segnale digitale tramite una luce infrarossa.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>3.3V-5V DC</td>
-                    <tr><td>Corrente operativa</td><td>≥20mA</td>
-                    <tr><td>Temperatura operativa</td><td>-10°C~+50°C</td>
-                    <tr><td>Distanza di rilevamento</td><td>2cm~40cm</td>
-                    <tr><td>Segnale di output</td><td>Singolo canale</td>
-                    <tr><td>Rilevamento</td><td>LOW= presenza di ostacolo; HIGH= assenza di ostacolo</td>
-                    <tr><td>Angolo di rilevamento</td><td>35°</td>
-                    </td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V ~ 5.0V DC</td></tr>
+                    <tr><td>Corrente operativa</td><td>≥20mA</td></tr>
+                    <tr><td>Temperatura operativa</td><td>-10°C ~ +50°C</td></tr>
+                    <tr><td>Distanza di rilevamento</td><td>2cm ~ 40cm</td></tr>
+                    <tr><td>Segnale di output</td><td>Singolo canale</td></tr>
+                    <tr><td>Rilevamento</td><td>LOW= presenza di ostacolo; HIGH= assenza di ostacolo</td></tr>
+                    <tr><td>Angolo di rilevamento</td><td>35°</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-033 -->
@@ -450,14 +447,13 @@
                 <p>È un sensore che rileva linee e bordi presenti sul terreno e fornisce un segnale digitale tramite una luce infrarossa.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>3.3V-5V DC</td>
-                    <tr><td>Corrente operativa</td><td>≥20mA</td>
-                    <tr><td>Temperatura operativa</td><td>-10°C~+50°C</td>
-                    <tr><td>Distanza di rilevamento</td><td>2cm~40cm</td>
-                    <tr><td>Segnale di output</td><td>Singolo canale</td>
-                    <tr><td>Rilevamento</td><td>LOW= presenza di ostacolo; HIGH= assenza di ostacolo</td>
-                    <tr><td>Angolo di rilevamento</td><td>35°</td>
-                    </td></tr>
+                    <tr><td>Tensione operativa</td><td>3.3V - 5.0V DC</td></tr>
+                    <tr><td>Corrente operativa</td><td>≥20mA</td></tr>
+                    <tr><td>Temperatura operativa</td><td>-10°C ~ +50°C</td></tr>
+                    <tr><td>Distanza di rilevamento</td><td>2cm ~ 40cm</td></tr>
+                    <tr><td>Segnale di output</td><td>Singolo canale</td></tr>
+                    <tr><td>Rilevamento</td><td>LOW= presenza di ostacolo; HIGH= assenza di ostacolo</td></tr>
+                    <tr><td>Angolo di rilevamento</td><td>35°</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-034 -->
@@ -468,9 +464,8 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>LED</td><td>Ø5mm</td></tr>
-                    <tr><td>Colori</td><td>Rosa, giallo, verde</td>
-                    <tr><td>Tensione operativa</td><td>3V-4.5V DC</td>
-                    </td></tr>
+                    <tr><td>Colori</td><td>Rosa, giallo, verde</td></tr>
+                    <tr><td>Tensione operativa</td><td>3.0V - 4.5V DC</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-035 -->
@@ -481,10 +476,9 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Collegamento as Arduino</td><td>Pin GND e 5V</td></tr>
-                    <tr><td>Dati rilevati sul campo magnetico</td><td>Pin S</td>
-                    <tr><td>Tensione operativa</td><td>5V</td>
-                    <tr><td>Consumo</td><td>8mA</td>
-                    </td></tr>
+                    <tr><td>Dati rilevati sul campo magnetico</td><td>Pin S</td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V</td></tr>
+                    <tr><td>Consumo</td><td>8mA</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-036 -->
@@ -495,9 +489,8 @@
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
                     <tr><td>Comparatore di tensione</td><td>LM393</td></tr>
-                    <tr><td>Tensione operativa</td><td>5V DC</td>
-                    <tr><td>Uscita</td><td>Singolo canale</td>
-                    </td></tr>
+                    <tr><td>Tensione operativa</td><td>5.0V DC</td></tr>
+                    <tr><td>Uscita</td><td>Singolo canale</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-037 -->
@@ -509,9 +502,8 @@
                 <table class="spec-table">
                     <tr><td>Uscita analogica</td><td>A0</td></tr>
                     <tr><td>Uscita digitale</td><td>D0</td></tr>
-                    <tr><td>Tensione operativa</td><td>3V-15V DC</td>
-                    <tr><td>Sensibilità</td><td>Regolabile tramite potenziometro</td>
-                    </td></tr>
+                    <tr><td>Tensione operativa</td><td>3.0V - 15.0V DC</td></tr>
+                    <tr><td>Sensibilità</td><td>Regolabile tramite potenziometro</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-038 -->
@@ -523,9 +515,8 @@
                 <table class="spec-table">
                     <tr><td>Uscita analogica</td><td>A0</td></tr>
                     <tr><td>Uscita digitale</td><td>D0</td></tr>
-                    <tr><td>Tensione operativa</td><td>3V-15V DC</td>
-                    <tr><td>Sensibilità</td><td>Regolabile tramite potenziometro</td>
-                    </td></tr>
+                    <tr><td>Tensione operativa</td><td>3.0V - 15.0V DC</td></tr>
+                    <tr><td>Sensibilità</td><td>Regolabile tramite potenziometro</td></tr>
                 </table>
             </div>
            <!-- Esempio Sensore KY-039 -->
@@ -535,9 +526,8 @@
                 <p>È un modulo che rileva le pulsazioni cardiache tramite il tocco di un dito e fornisce un segnale digitale.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Uscita Analogica</td><td>A0</td></tr>
-                    <tr><td>Uscita sul sensore</td><td>S</td>
-                    </td></tr>
+                    <tr><td>Uscita analogica</td><td>A0</td></tr>
+                    <tr><td>Uscita sul sensore</td><td>S</td></tr>
                 </table>
             </div>
             <!-- Esempio Sensore KY-040 -->
@@ -547,7 +537,7 @@
                 <p>È un modulo che rileva il movimento rotazionale e fornisce un segnale digitale. Arduino è in grado di leggere il segnale dello spostamento e interpretarlo.</p>
                 <h3>Specifiche Tecniche</h3>
                 <table class="spec-table">
-                    <tr><td>Tensione operativa</td><td>5V cc</td>
+                    <tr><td>Tensione operativa</td><td>5.0V cc</td>
                     <tr><td>Corrente massima</td><td>10mA</td>
                     <tr><td>Cicli di vita</td><td>~30.000</td>
                     </td></tr>
